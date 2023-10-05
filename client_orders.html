@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список товаров заказанных клиентом</title>
+</head>
+<body>
+    <h1>Список товаров заказанных клиентом</h1>
+    <h2>Последние 7 дней</h2>
+    <ul>
+        {% for product in last_7_days %}
+            <li>{{ product.name }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Последние 30 дней</h2>
+    <ul>
+        {% for product in last_30_days %}
+            <li>{{ product.name }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Последние 365 дней</h2>
+    <ul>
+        {% for product in last_365_days %}
+            <li>{{ product.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
